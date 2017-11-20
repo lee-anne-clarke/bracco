@@ -1,0 +1,860 @@
+//SASS file used for Bracco miscrosite: http://lee-anne-clarke.com/work/bracco
+
+
+@import 'variables';
+
+
+/*---------------------------------------------------
+	Global Styles
+---------------------------------------------------*/
+
+body {
+	background-color: $braccoGray;
+}
+
+img {
+	max-width: 100%;
+}
+
+hr {
+	border-width: 0.2em;
+	margin: 1.2em 2em 1.2em 0;
+}
+
+@include custom-hr(purple, $braccoPurple);
+
+@include custom-hr(yellow, #fcf71b);
+
+@include custom-hr(blue, #1b4682);
+
+.vertical-divider {
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+}
+
+.desktopbr {
+	display: inline;
+}
+
+.navbar-brand,
+.navbar__brand--mobile,
+.footer__logo--dt,
+.footer__logo--mobile {
+	img {
+		max-width: 94px;
+		max-height: 99px;
+	}
+}
+
+.maincontent {
+	padding: 0;
+}
+
+.section1 .container,
+.section3 .container {
+	max-width: 830px;
+	padding-left: 20px;
+}
+
+.section2, 
+.section4 {
+	background-color: #0e6fb7
+}
+
+.section6,
+footer,
+.footer__bottom {
+	z-index: 5;
+}
+
+.mobilebr, 
+.scrollarrow,
+.navbar__brand--mobile,
+.footer__logo--mobile,
+.casestudyimg--mobile,
+.hr-footer {
+	display: none;
+}
+
+
+
+/*---------------------------------------------------
+	Fonts
+---------------------------------------------------*/
+
+sup {
+	font-size: 10px;
+}
+
+h1 {
+	margin-top: 0;
+	padding-top: 20px;	
+	sup {
+		font-size: 14px;
+		top: -1.2em;
+	}
+}
+
+h2 {
+	font-size: 22px;
+	sup {font-size: 14px;}
+}
+
+.section2 h1,
+.section2 h2,
+.section4 h1, 
+.section4 h2 {
+	color: white;
+}
+
+section {
+	p, ul {font-size: 18px;}
+	
+	ul li {
+		color: $braccoDarkPurple; 
+		margin-bottom: 0.55em;
+		span {color: $braccoBlack;}
+	}
+}
+
+.bluetext {color: #123884;}
+
+.whitetext {color: white;} 
+
+.strongpurple {color: $braccoDarkPurple;}
+
+
+
+/*---------------------------------------------------
+	Navigation
+---------------------------------------------------*/
+
+.navbar-inverse {
+    background-color: white;
+    border-color: white;
+	margin: 0 auto;
+
+	.navbar-collapse {
+		padding-right: 0;
+		margin-bottom: -55px;
+		border-color: $light-gray;
+	}
+	
+	.navbar-toggle{
+		&, &:hover, &:active, &:focus {
+			background-color: $light-gray;
+			border-color: $light-gray;
+		}
+	}
+}
+
+.navbar-brand { /* logo */
+	padding: 5px 0 0;
+	margin-right: 41px;
+	margin-bottom: 59px;
+}	
+
+.navbar__brand--mobile {
+	max-width: 103px;
+	padding-left: 10px;
+}
+
+
+nav li {
+	float: left;
+	display: inline;
+	height: 54px;
+	border-left: 1px solid $braccoGray;
+	border-bottom: 1px solid $braccoGray;
+	
+	a {
+		display: inline;
+		float: left;
+		font-family: "Dosis", sans-serif;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-left: 20px;
+		padding-top: 23px;
+		@include noLinkDecor;
+		opacity: 0.35;
+	}
+
+	a:hover,
+	a:active,
+	a:focus, 
+	&.active a  {
+		opacity: 1;
+		@include noLinkDecor;
+	}
+}
+	
+	
+@include navitem(corporate,118px,#009C50);
+
+@include navitem(diagnosis,198px,#2BA9D3);
+
+@include navitem(farmacia,150px,#ECA52D);
+
+@include navitem(servizi,140px,#0051B6);
+
+	
+li.pressroom {
+    background: url("../img/sf_stampa.jpg") no-repeat scroll left top transparent;
+    width: 122px;
+	a {
+		background: url("../img/sf_pressroom.jpg") no-repeat scroll center 8px transparent;
+		color: #7D7D7D;
+		padding-top: 26px;
+		opacity: 1;
+	}
+}
+	
+	
+li.contati {
+    background: url("../img/sf_contatti.jpg") no-repeat scroll center -10px transparent;
+    width: 98px;
+	a {
+		color: #7D7D7D;
+		padding-top: 26px;
+		opacity: 1;
+	}
+}
+	
+li.pressroom a:hover,
+li.pressroom a:active,
+li.pressroom a:focus,
+li.contati a:hover,
+li.contati a:active,
+li.contati a:focus {color: #009C50;}
+	
+.navemptyrow {
+	height: 55px;
+	margin-left: 120px;
+	border-left: 1px solid $braccoGray;
+}
+
+
+
+/*---------------------------------------------------
+	Header
+---------------------------------------------------*/
+
+header {text-align: center;}
+
+
+
+/*----------------------------------------------------------
+	Section 1 - Get the WHOLE Story About CNS MR Contrast
+------------------------------------------------------------*/
+
+.section1 {
+	h2 {margin-bottom: 1.35em;}
+	ul {padding-left: 0;}
+	.list {padding-bottom: 2em;}
+	.logos {padding-left: 2.2em;}
+}
+
+.prohancelogo {margin-bottom: 2.5em;}
+
+
+
+/*---------------------------------------------------
+	Section 2 - Case Studies
+---------------------------------------------------*/
+
+.section2 {
+	h2 {padding-right: 1.2em;}
+	
+	.reference {
+		color: white;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		line-height: 1.1em;
+		clear: both;
+	}
+}
+
+.casestudy__btn {
+	float: left;
+	width: 161px;
+	height: 36px;
+	background-color: #0858a5;
+	color: white;
+	font-size: 15px;
+	line-height: 2.4em;
+	font-weight: bold;
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding-left: 1.2em;
+	margin-top: 10px;
+	margin-right: 6px;
+	cursor: pointer;
+	span {opacity: 0.5;}
+
+	&:hover,
+	&:active,
+	&:focus,
+	&--active {
+		background-color: $braccoPurple;
+		span {opacity: 1;}
+	}
+}
+
+.casestudies__boxes {
+	background-color: white;
+	padding-right: 0;
+	margin-bottom: 20px;
+	@include box-shadow(3px,4px,5px,0,10,11,11,1);
+	clear: both;
+
+	.row {margin-right: -55px;}
+	
+	p {
+		padding-top: 20px; 
+		padding-left: 5px;
+	}
+}
+
+.casestudy__img {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.casestudyimg__modal {
+	cursor: pointer;
+}
+
+.modal-dialog {
+	width: 641px;
+	text-align: center;
+	padding: 0;
+}
+
+.modal-body {padding: 0;}
+
+#CaseStudy2 {display: none;}
+
+
+
+/*---------------------------------------------------
+	Section 3 - The 95% confidence intervals 
+---------------------------------------------------*/
+
+.carousel-inner {
+	.item {
+		opacity: 0;
+		@include transition-property(opacity);
+		@include transition-duration(0.3s);
+		@include transition-timing-function(ease);
+	}
+	
+	.active {opacity: 1;}
+	
+	.next.left, 
+	.prev.right {
+	   opacity: 1; 
+	   z-index: 1;
+	}
+	
+	.active.left, 
+	.active.right {
+	   opacity: 0;
+	   z-index: 2;
+	}
+}
+
+.chartstext {
+	padding-left: 0;
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
+}
+
+
+.chartslist {
+	padding-left: 20px;
+}
+
+.chartslist__item {
+	&:hover {cursor: pointer;}	
+	
+	span {color: #0060ad;}
+	
+	&--active span {font-weight: bold;}
+}
+
+.carousel-indicators {
+	top: 107%;
+	z-index: auto;
+
+	li {
+		background-color: #a3a9ae;
+		border: none;
+		margin-right: 0.6em;
+	}
+	
+	.active {
+		background-color: $braccoPurple;
+		margin-right: 0.6em;
+	}
+}
+
+
+/*---------------------------------------------------
+	Section 4 - The TRUTH Speaks for Itself
+---------------------------------------------------*/
+
+.section4 {
+	color: white;	
+	p a {color: #C5E3F4;}
+}
+
+.truthbutton {padding-top: 7.2em;}
+
+.visitus {
+	font-size: 22px;
+	margin-top: 1em;
+}
+
+
+
+/*---------------------------------------------------
+	Section 5 - References
+---------------------------------------------------*/
+
+.section5 {
+	background: white;
+
+	.reference {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		line-height: 1.1em;
+	}
+}
+
+
+
+/*---------------------------------------------------
+	Section 6 - Safety Information
+---------------------------------------------------*/
+
+#SafetyPreview {
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	padding-top: 8px;
+	border-top: 1px solid #BBB;
+	z-index: 5;
+}
+
+#SafetyPreview p,
+.section6 p,
+.section6 ul {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.2em;
+}
+
+.section6 p a {
+	color: #0060ad;
+	@include noLinkDecor;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+	
+.section6 ul {
+	li {
+		color: #000;
+		margin-bottom: 0;
+	}
+	
+	ul li {
+		list-style-type: disc;
+	}
+}
+
+p.safetyinfo__title {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 1em;
+}
+
+.warningbox {
+	border: 1px solid #000;
+	padding: 15px;
+	margin: 0 -15px 15px;
+}
+
+.privacy-links-br {display: none;}
+
+
+
+/*---------------------------------------------------
+	Footer & .footer__bottom
+---------------------------------------------------*/
+
+footer {
+	margin-top: -40px;
+	background: url(../img/footer-bg.gif) no-repeat;
+}
+
+.footer__slogan img {
+	padding-top: 50px;
+}
+
+.footer__logo {
+	text-align: right;
+	padding-top: 10px;
+}
+
+.footer__bottom {
+	background-color: white;
+	padding: 8px 0;
+}
+
+
+/*---------------------------------------------------
+	Media Queries
+---------------------------------------------------*/
+
+@media (min-width: 992px) {
+	.section1 {padding: 12px 140px 40px 97px;}	
+	.section2 {padding: 30px 140px 70px 97px;}
+	.section3 {padding: 75px 140px 130px 97px;}
+	.section4 {padding: 30px 140px 40px 97px;}
+	.section5 {padding: 12px 140px 0 97px;}
+	.section6 {padding: 0 140px 30px 97px;}
+		
+	.section4 {background: url(../img/bluebg2.gif);}
+	.section6 {background: white url(../img/whitebg3.gif) no-repeat bottom;}
+	.section1 {@include section-bg(whitebg1);}
+	.section2 {@include section-bg(bluebg1);}
+	.section3 {@include section-bg(whitebg2);}
+
+	.section1 {z-index: 4;}
+	.section2 {z-index: 3;}
+	.section3 {z-index: 2;}
+	
+	.section2 {margin-top: -2.45em;}
+	.section3 {margin-top: -5.4em;}
+	.section4 {margin-top: -3.5em;}
+
+	.section4 .container,
+	.section5 .container {
+		padding-left: 0;
+		max-width: 830px;
+	}
+	
+	#SafetyPreview .container {
+		width: 1020px;
+		padding: 0 140px 0 97px;
+	}
+	
+	#Charts {
+		padding-right: 0;
+	}
+}
+
+
+@media (min-width: 1021px) {
+	.navbar-inverse,
+	.maincontent,
+	.nav__container {
+		width: 1020px;
+	}
+	
+	.nav__container {
+		padding-left: 74px;
+		padding-right: 0;
+	}
+}
+		
+	
+@media (max-width: 1030px) {
+	header img,
+	.maincontent {width: 100%;}
+	
+	.casestudies__boxes {
+		padding-right: 15px;
+		.row {margin-right: -30px;}
+	}
+	
+	footer.col-md-12 {padding: 0 25px 0;}
+}
+
+
+@media (max-width: 1020px) {
+	.navbar-inverse .navbar-collapse {
+		margin-bottom: 0;
+	}
+	
+	.navemptyrow {
+		display: none;
+	}
+	
+	.casestudy__box {
+		padding-right: 15px;
+		.row {margin-right: -15px;}
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 1020px) {
+	.nav__container {
+		width: 750px;
+		margin-left: 0;
+		.navbar-brand {margin-left: 0;}
+	}
+	
+	.navbar-brand {
+		margin-right: 20px;
+	}
+}
+
+
+@media (max-width: 991px) {
+	.desktopbr,
+	.vertical-divider {
+		display: none;
+	}
+	
+	.navbar {border: none;}
+	
+	.nav__container {padding-right: 0;}
+	
+	.scrollarrow {
+		position: relative;
+		display: block;
+		text-align: center;
+		padding-top: 2.5em;
+		z-index: 4;
+	}
+		
+	.section1, 
+	.section2 {
+		padding: 12px 60px 0;
+	}
+	
+	.section3 {padding: 12px 60px 0;}
+	
+	.section4 {padding: 12px 60px 25px;}
+	
+	.section5 {padding: 12px 60px 20px;}
+	
+	.section6 {
+		padding: 0 60px 30px;
+		margin-top: -1.2em;
+	}
+	
+	.section2, 
+	.section3, 
+	.section4 {margin-top: -1.7em;}
+
+	.section1,
+	.section3,
+	.section6 {background: white;}
+		
+	#SafetyPreview .container {padding: 0 60px 0;}
+	
+	.section1 .container,
+	.section4 .container,
+	#SafetyPreview .container {width: 100%;}
+	
+	.section4 .container,
+	.section5 .container {padding: 0;}
+	
+	.section1 {
+		.list {
+			padding-left: 0;
+			padding-bottom: 0;
+		}
+		
+		ul {
+			padding-left: 15px;
+			margin-bottom: 40px;
+		}
+	}
+	
+	.section1 .logos {padding: 0;}
+	
+	.prohancelogo {
+		margin-right: 40px;
+		margin-bottom: 0;
+		vertical-align: bottom;
+	}
+	
+	.casestudies__boxes .row {margin-right: -15px;}
+	
+	.casestudies-btns {margin-top: 20px;}
+	
+	.casestudy__img {
+		text-align: center;
+		padding: 15px 0 25px;
+	}
+	
+	#Charts {
+		padding-left: 0;
+		margin-top: 3em;
+		margin-bottom: 3.5em;
+	}
+	
+	.carousel-inner {
+		width: 400px; 
+		margin: 0 auto;
+	}
+
+	.truthbutton {
+		padding-top: 2em;
+		text-align: center;
+	}
+	
+	.privacy-links {
+		display: block;
+		margin: 1em 0 1em;
+	}
+	
+	.privacy-links-br {display: inline;}
+	
+	footer {background: white;}
+	
+	footer.col-md-12 {padding: 10px 25px 0;}
+	
+	.hr-footer {
+		display: block;
+		margin: 1em 0 0.6em 0;
+	}
+	
+	.footer__slogan,
+	.footer__logo {
+		float: left;
+		width: 50%;
+	}
+}
+
+
+@media (max-width: 767px) {
+	#SafetyPreview {display: none;}
+	
+	.navbar-brand {
+		padding: 5px 0 0 10px;
+		margin-bottom: 54px;
+	}
+	
+	.nav__container {
+		padding-left: 20px;
+		padding-right: 15px;
+	}
+	
+	.navbar-collapse {padding-left: 0;}
+	
+	.navbar-header {margin-bottom: 10px;}
+
+	nav {
+		ul {
+			padding: 0;
+			margin: 2px 0 5px;
+		}
+		
+		li {
+			display: block;
+			float: none;
+			border-left: none;
+			height: 35px;
+		}	
+	}
+	
+	li.corporate,
+	li.diagnosis,
+	li.farmacia,
+	li.servizi,
+	li.pressroom {
+		width: 100%;
+	}
+	
+	li.corporate a,
+	li.diagnosis a,
+	li.farmacia a,
+	li.servizi a,
+	li.pressroom a,
+	li.contati a {
+		background: none;
+		padding-top: 7px;
+	}
+	
+	li.pressroom {background: none;}
+	
+	li.contati {
+		background: none;
+		border: none;
+	}
+	
+	.chartslist__item span {font-size: 16px;}
+}
+
+
+@media (max-width: 680px) {
+	.mobilebr {display: block;}
+	
+	.section1 .logos {text-align: center;}
+	
+	.prohancelogo {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	
+	.casestudy__img {padding: 10px 0 20px;}
+	
+	.casestudyimg__modal {display: none;}
+	
+	.casestudyimg--mobile {display: inline;}
+}
+
+
+@media (max-width: 540px) {
+	h1, 
+	.h1 {
+		font-size: 30px;
+	}
+	
+	.carousel-inner {width: 100%;}
+}
+
+
+@media (max-width: 460px) {
+	.section1 {padding: 0 30px 0;}
+
+	.section2 {padding: 15px 30px 0;}
+	
+	.section3 {padding: 9px 30px 0;}
+	
+	.section4 {padding: 15px 30px;}
+	
+	.section5 {padding: 15px 30px 0;}
+	
+	.section6 {padding: 15px 30px 30px;}
+	
+	.navbar-brand,
+	.footer__logo--dt {display: none;}
+	
+	.navbar__brand--mobile,
+	.footer__logo--mobile {display: block;}
+}
+
+
+@media (max-width: 400px) {
+	.casestudy__btn {
+		width: 110px;
+		height: 30px;
+		font-size: 12px;
+		text-align: center;
+		padding-left: 0;
+	}
+}

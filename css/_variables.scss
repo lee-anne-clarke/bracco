@@ -1,0 +1,78 @@
+
+$light-gray: #ccc;
+
+$braccoBlack: #333;
+
+$braccoGray: #F4F4F4;
+
+$braccoPurple: #d72797;
+
+$braccoDarkPurple: #d40f8c;
+
+@mixin noLinkDecor {text-decoration: none;}
+
+@mixin box-shadow($x, $y, $blur, $spread, $r, $g, $b, $a) {
+	-webkit-box-shadow: $x $y $blur $spread rgba($r, $g, $b, $a);
+	-moz-box-shadow: $x $y $blur $spread rgba($r, $g, $b, $a);
+	box-shadow: $x $y $blur $spread rgba($r, $g, $b, $a);
+}
+
+@mixin transition-property($p) {
+   -webkit-transition-property: $p;
+   -moz-transition-property: $p; 
+   -o-transition-property: $p;
+   -ms-transition-property: $p;
+   transition-property: $p;
+}
+
+@mixin transition-duration($d) {
+	-webkit-transition-duration: $d;
+	-moz-transition-duration: $d;
+	-o-transition-duration: $d;
+	-ms-transition-duration: $d;
+}
+
+@mixin transition-timing-function($t) {
+	-webkit-transition-timing-function: $t;
+	-moz-transition-timing-function: $t;
+	-o-transition-timing-function: $t;
+	-ms-transition-timing-function: $t;
+	transition-timing-function: $t;
+}
+
+@mixin custom-hr($hr-color, $border-color) {
+	.hr-#{$hr-color} {
+		border-color: $border-color
+	}
+}
+
+
+//---------------------------------------------------
+	// Navigation
+//---------------------------------------------------
+
+@mixin navitem($item-name, $width, $link-color) {
+	li.#{$item-name} {
+		width: $width;
+		a {
+			background: url("../img/link_#{$item-name}_on.png") no-repeat scroll 0 8px white;
+			color: $link-color;
+		}
+	}	
+}
+
+
+
+//---------------------------------------------------
+	// Media Queries
+//---------------------------------------------------
+
+@mixin section-bg($url) {
+	background: url(../img/#{$url}.png) no-repeat bottom;
+}
+
+
+
+
+
+
